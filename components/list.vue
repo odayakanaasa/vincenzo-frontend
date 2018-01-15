@@ -17,7 +17,7 @@
           <b-table-column field="title" label="Titel" sortable>
             <a @click.prevent="edit(props.row._id)"><strong>{{ props.row.title }}</strong></a>
             <div class="content">
-              <p v-if="props.row.description.length">
+              <p v-if="props.row.description != null && props.row.description.length">
                 {{ props.row.description }}
               </p>
               <p v-else class="has-text-danger">
