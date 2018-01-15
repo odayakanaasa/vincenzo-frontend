@@ -1,0 +1,12 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+.modal-card-body {
+  @media screen and (min-width: $desktop) {
+    min-height: 515px;
+  }
+}
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";

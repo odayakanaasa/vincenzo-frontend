@@ -1,0 +1,40 @@
+{
+  "name": "labella-vincenzo",
+  "version": "1.0.0",
+  "description": "Label printing software",
+  "author": "Marlon Haenen <marlon@mrln.nl>",
+  "private": true,
+  "scripts": {
+    "dev": "HOST=0.0.0.0 nuxt",
+    "build": "nuxt build",
+    "start": "NODE_ENV=production HOST=0.0.0.0 pm2 start node_modules/nuxt/bin/nuxt-start --name 'frontend'",
+    "restart": "pm2 delete frontend && yarn run start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^4.5.2",
+    "buefy": "^0.6.2",
+    "css-loader": "^0.28.7",
+    "moment": "^2.20.1",
+    "node-sass": "^4.7.2",
+    "nuxt": "^1.0.0-rc11",
+    "sass-loader": "^6.0.6",
+    "vee-validate": "^2.0.0",
+    "vue-server-renderer": "^2.5.13",
+    "vue-style-loader": "^3.0.3",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
